@@ -96,7 +96,7 @@ export default function Skills() {
                 backgroundColor: theme === 'dark' ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.8)", 
                 boxShadow: theme === 'dark' ? "0 25px 50px -12px rgba(6, 182, 212, 0.25)" : "0 25px 50px -12px rgba(37, 99, 235, 0.25)"
               }}
-              className="group relative flex flex-col gap-6 rounded-3xl border border-slate-300/50 dark:border-white/10 bg-white/40 dark:bg-black/40 p-8 backdrop-blur-xl transition-all duration-500 shadow-xl"
+              className="group relative flex flex-col gap-6 rounded-3xl border border-slate-300/50 dark:border-white/10 bg-white/70 dark:bg-black/40 p-8 backdrop-blur-xl transition-all duration-500 shadow-xl"
             >
               <div className="flex items-center gap-3 border-b border-slate-300/40 dark:border-white/10 pb-4">
                 <motion.div 

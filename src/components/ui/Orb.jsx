@@ -116,7 +116,7 @@ export default function Orb({
 
     vec4 draw(vec2 uv) {
       float bgLuminance = dot(backgroundColor, vec3(0.299, 0.587, 0.114));
-      float colorBoost = mix(3.5, 1.0, smoothstep(0.1, 0.4, bgLuminance));
+      float colorBoost = mix(1.8, 1.0, smoothstep(0.1, 0.4, bgLuminance));
       
       vec3 color1 = adjustHue(baseColor1, hue) * colorBoost;
       vec3 color2 = adjustHue(baseColor2, hue) * colorBoost;
@@ -129,17 +129,17 @@ export default function Orb({
       float n0 = snoise3(vec3(uv * noiseScale, iTime * 0.5)) * 0.5 + 0.5;
       float r0 = mix(mix(innerRadius, 1.0, 0.4), mix(innerRadius, 1.0, 0.6), n0);
       float d0 = distance(uv, (r0 * invLen) * uv);
-      float v0 = light1(mix(2.2, 1.2, bgLuminance), 15.0, d0);
+      float v0 = light1(mix(1.4, 1.2, bgLuminance), 15.0, d0);
 
       v0 *= smoothstep(r0 * 1.05, r0, len);
       float innerFade = smoothstep(r0 * 0.8, r0 * 0.95, len);
-      v0 *= mix(innerFade, 1.0, bgLuminance * 0.7);
+      v0 *= mix(innerFade, 1.0, 0.4 + bgLuminance * 0.3); // 0.4 in dark, 0.7 in light (original)
       float cl = cos(ang + iTime * 2.0) * 0.5 + 0.5;
       
       float a = iTime * -1.0;
       vec2 pos = vec2(cos(a), sin(a)) * r0;
       float d = distance(uv, pos);
-      float v1 = light2(mix(3.5, 2.0, bgLuminance), 4.0, d);
+      float v1 = light2(mix(2.2, 2.0, bgLuminance), 4.0, d);
       v1 *= light1(1.0, 50.0, d0);
       
       float v2 = smoothstep(1.0, mix(innerRadius, 1.0, n0 * 0.5), len);

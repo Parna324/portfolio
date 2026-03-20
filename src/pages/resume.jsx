@@ -5,7 +5,7 @@ import LaserFlow from "../components/ui/LaserFlow";
 const contacts = [
   { label: "Email", value: "parnaghosh628@gmail.com", href: "mailto:parnaghosh628@gmail.com" },
   { label: "Mobile", value: "+91 9163878703", href: "tel:+919163878703" },
-  { label: "LinkedIn", value: "linkedin.com/in/parnaghosh324", href: "https://linkedin.com/in/parnaghosh324" },
+  { label: "LinkedIn", value: "linkedin.com/in/parnaghosh324", href: "https://www.linkedin.com/in/parnaghosh324/" },
   { label: "GitHub", value: "github.com/Parna324", href: "https://github.com/Parna324" },
 ];
 

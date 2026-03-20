@@ -11,14 +11,16 @@ body {
   padding: 0;
   background-color: #f8fafc;
   color: #030712;
-  &.dark {
-    background-color: #030303;
-    color: #f8fafc;
-  }
   font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Correctly target body when dark class is on html */
+:where(.dark) body {
+  background-color: #030303;
+  color: #f8fafc;
 }
 
 /* Custom sleek scrollbar for webkit */

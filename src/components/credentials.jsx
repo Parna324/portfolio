@@ -7,7 +7,7 @@ const education = [
     institution: "Lovely Professional University",
     location: "Phagwara, Punjab",
     degree: "Bachelor of Technology - Computer Science and Engineering",
-    score: "CGPA: 6.51",
+    score: "CGPA: 8.51",
     date: "Aug 2023 - Present",
   },
   {
@@ -94,7 +94,7 @@ const TimelineItem = ({ data, isLast, delay, isDark }) => (
       className={`absolute left-0 sm:left-2 top-7 h-6 w-6 rounded-full border-4 ${isDark ? 'border-[#030712] bg-slate-700' : 'border-white bg-slate-200'} transform transition-transform duration-300 group-hover:scale-125 group-hover:bg-blue-600 dark:group-hover:bg-cyan-400 group-hover:shadow-lg z-10`} 
     />
 
-    <div className="flex flex-col gap-1.5 rounded-3xl bg-white/40 dark:bg-white/5 p-6 sm:p-8 border border-slate-300 dark:border-white/10 group-hover:bg-white/60 dark:group-hover:bg-white/10 group-hover:border-blue-600 dark:group-hover:border-blue-500/50 transition-all duration-300 shadow-xl backdrop-blur-md">
+    <div className="flex flex-col gap-1.5 rounded-3xl bg-white/70 dark:bg-white/5 p-6 sm:p-8 border border-slate-300 dark:border-white/10 group-hover:bg-white/60 dark:group-hover:bg-white/10 group-hover:border-blue-600 dark:group-hover:border-blue-500/50 transition-all duration-300 shadow-xl backdrop-blur-md">
       <div className="flex flex-wrap justify-between items-start gap-x-4 gap-y-2">
         <h4 className="text-xl font-black text-slate-900 dark:text-white tracking-wide group-hover:text-blue-700 dark:group-hover:text-cyan-300 transition-colors">
           {data.institution || data.title}

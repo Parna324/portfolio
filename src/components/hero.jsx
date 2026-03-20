@@ -102,7 +102,7 @@ export default function Hero() {
             <motion.a 
               whileHover={{ scale: 1.15, y: -5 }} 
               whileTap={{ scale: 0.9 }}
-              href="https://linkedin.com/in/parna-ghosh" 
+              href="https://www.linkedin.com/in/parnaghosh324/" 
               target="_blank" 
               rel="noopener"
               className="p-3.5 rounded-full bg-white/40 dark:bg-white/10 border border-slate-300/50 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:border-blue-500/50 dark:hover:border-cyan-400/50 backdrop-blur-md shadow-lg transition-colors"

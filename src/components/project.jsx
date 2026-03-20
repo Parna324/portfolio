@@ -78,7 +78,7 @@ function ProjectCard({ project, index }) {
         showTooltip={false}
         displayOverlayContent
         overlayContent={
-          <div className="group relative flex h-full flex-col p-6 sm:p-8 overflow-hidden bg-white/60 dark:bg-[#030712]/60 backdrop-blur-2xl border border-slate-300 dark:border-white/10 hover:border-blue-500 dark:hover:border-cyan-400/50 hover:bg-white/70 dark:hover:bg-[#030712]/40 transition-all duration-700 rounded-3xl shadow-xl">
+          <div className="group relative flex h-full flex-col p-6 sm:p-8 overflow-hidden bg-white/80 dark:bg-[#030712]/60 backdrop-blur-2xl border border-slate-300 dark:border-white/10 hover:border-blue-500 dark:hover:border-cyan-400/50 hover:bg-white/70 dark:hover:bg-[#030712]/40 transition-all duration-700 rounded-3xl shadow-xl">
             {/* Subtle glow effect on hover */}
             <div className="pointer-events-none absolute -inset-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
               <div className={`h-full w-full ${isDark ? 'bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.15),transparent_60%)]' : 'bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_60%)]'}`} />
