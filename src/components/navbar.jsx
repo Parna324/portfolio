@@ -31,16 +31,26 @@ export default function Navbar() {
       {/* DESKTOP NAV */}
       <div className="hidden md:flex items-center gap-4">
         <nav className="flex items-center gap-2 rounded-full bg-white/40 dark:bg-white/5 border border-slate-300/40 dark:border-white/10 px-4 py-2 backdrop-blur-xl shadow-lg dark:shadow-[0_0_30px_rgba(255,255,255,0.02)] transition-colors duration-500">
-          {["home", "skills", "projects", "contact"].map((item) => (
-            <motion.a 
+          <Link 
+            to="/"
+            className="px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-slate-700 dark:text-slate-400 transition-colors hover:text-blue-600 dark:hover:text-cyan-400 rounded-full"
+          >
+            home
+          </Link>
+          <Link 
+            to="/about"
+            className="px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-slate-700 dark:text-slate-400 transition-colors hover:text-blue-600 dark:hover:text-cyan-400 rounded-full"
+          >
+            about
+          </Link>
+          {["skills", "projects", "contact"].map((item) => (
+            <a 
               key={item}
-              whileHover={{ y: -2, backgroundColor: theme === 'dark' ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.05)" }}
-              whileTap={{ scale: 0.95 }}
               href={`/#${item}`} 
               className="px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-slate-700 dark:text-slate-400 transition-colors hover:text-blue-600 dark:hover:text-cyan-400 rounded-full"
             >
               {item}
-            </motion.a>
+            </a>
           ))}
         </nav>
 

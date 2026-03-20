@@ -2,9 +2,9 @@ import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 const springValues = {
-  damping: 30,
-  stiffness: 100,
-  mass: 2,
+  damping: 40,
+  stiffness: 120,
+  mass: 1,
 };
 
 export default function TiltedCard({
@@ -15,8 +15,8 @@ export default function TiltedCard({
   containerWidth = "100%",
   imageHeight = "320px",
   imageWidth = "100%",
-  scaleOnHover = 1.04,
-  rotateAmplitude = 12,
+  scaleOnHover = 1.02,
+  rotateAmplitude = 2,
   showMobileWarning = false,
   showTooltip = false,
   overlayContent = null,
