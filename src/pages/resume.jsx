@@ -3,17 +3,35 @@ import Navbar from "../components/navbar";
 import LaserFlow from "../components/ui/LaserFlow";
 
 const contacts = [
-  { label: "Email", value: "parnaghosh628@gmail.com", href: "mailto:parnaghosh628@gmail.com" },
+  {
+    label: "Email",
+    value: "parnaghosh628@gmail.com",
+    href: "mailto:parnaghosh628@gmail.com",
+  },
   { label: "Mobile", value: "+91 9163878703", href: "tel:+919163878703" },
-  { label: "LinkedIn", value: "linkedin.com/in/parnaghosh324", href: "https://www.linkedin.com/in/parnaghosh324/" },
-  { label: "GitHub", value: "github.com/Parna324", href: "https://github.com/Parna324" },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/parnaghosh324",
+    href: "https://www.linkedin.com/in/parnaghosh324/",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Parna324",
+    href: "https://github.com/Parna324",
+  },
 ];
 
 const skills = {
-  "Languages": ["C++", "Python", "JavaScript", "Java"],
-  "Frameworks": ["React.js", "Express.js", "Node.js", "Tailwind CSS"],
+  Languages: ["C++", "Python", "JavaScript", "Java"],
+  Frameworks: ["React.js", "Express.js", "Node.js", "Tailwind CSS"],
   "Database & Tools": ["MySQL", "MongoDB", "Git/GitHub"],
-  "Soft Skills": ["Problem Solving", "Team Collaboration", "Adaptability", "Leadership", "Ownership"],
+  "Soft Skills": [
+    "Problem Solving",
+    "Team Collaboration",
+    "Adaptability",
+    "Leadership",
+    "Ownership",
+  ],
 };
 
 const projects = [
@@ -32,7 +50,10 @@ const projects = [
   {
     name: "AI-Powered Virtual Bartender",
     period: "Nov' 25 – Dec' 25",
-    links: { GitHub: "https://github.com/Parna324", Live: "https://virtual-bartender-sandy.vercel.app/" },
+    links: {
+      GitHub: "https://github.com/Parna324",
+      Live: "https://virtual-bartender-sandy.vercel.app/",
+    },
     points: [
       "Designed an intelligent beverage suggestion platform that recommends drinks according to user mood and preference inputs.",
       "Constructed reusable UI components using React.js, improving maintainability and interface responsiveness.",
@@ -45,7 +66,10 @@ const projects = [
   {
     name: "E-Learning Platform",
     period: "Mar' 25 – Apr' 25",
-    links: { GitHub: "https://github.com/Parna324", Live: "https://github.com/Parna324" },
+    links: {
+      GitHub: "https://github.com/Parna324",
+      Live: "https://github.com/Parna324",
+    },
     points: [
       "Engineered a scalable learning management solution supporting course exploration, user registration, and structured content delivery.",
       "Organized application architecture using Next.js, enabling optimized routing, metadata configuration, and reusable layout modules.",
@@ -81,9 +105,27 @@ const achievements = [
 ];
 
 const education = [
-  { institution: "Lovely Professional University", location: "Phagwara, Punjab", degree: "Bachelor of Technology - Computer Science and Engineering", detail: "CGPA: 6.51", period: "Aug' 23 - Present" },
-  { institution: "North Point School", location: "Kolkata, West Bengal", degree: "Intermediate", detail: "Percentage: 63.6%", period: "Apr' 21 – Mar' 23" },
-  { institution: "North Point School", location: "Kolkata, West Bengal", degree: "Matriculation", detail: "Percentage: 89.6%", period: "Apr' 20 – Mar' 21" },
+  {
+    institution: "Lovely Professional University",
+    location: "Phagwara, Punjab",
+    degree: "Bachelor of Technology - Computer Science and Engineering",
+    detail: "CGPA: 8.51",
+    period: "Aug' 23 - Present",
+  },
+  {
+    institution: "North Point School",
+    location: "Kolkata, West Bengal",
+    degree: "Intermediate",
+    detail: "Percentage: 63.6%",
+    period: "Apr' 21 – Mar' 23",
+  },
+  {
+    institution: "North Point School",
+    location: "Kolkata, West Bengal",
+    degree: "Matriculation",
+    detail: "Percentage: 89.6%",
+    period: "Apr' 20 – Mar' 21",
+  },
 ];
 
 function Section({ title, children, id }) {
@@ -99,7 +141,9 @@ function Section({ title, children, id }) {
 
 function ResumeCard({ children, className = "" }) {
   return (
-    <div className={`rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl ${className}`}>
+    <div
+      className={`rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur-xl ${className}`}
+    >
       {children}
     </div>
   );
@@ -111,7 +155,12 @@ export default function Resume() {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <LaserFlow color="#3B82F6" fogIntensity={0.35} wispIntensity={4} flowSpeed={0.3} />
+        <LaserFlow
+          color="#3B82F6"
+          fogIntensity={0.35}
+          wispIntensity={4}
+          flowSpeed={0.3}
+        />
         <div className="absolute -top-40 -left-32 w-[420px] h-[420px] rounded-full bg-[radial-gradient(circle_at_30%_0%,rgba(56,189,248,0.4),transparent_65%)] blur-3xl opacity-80" />
         <div className="absolute bottom-[-120px] right-[-60px] w-[420px] h-[420px] rounded-full bg-[radial-gradient(circle_at_70%_100%,rgba(129,140,248,0.45),transparent_70%)] blur-3xl opacity-80" />
       </div>
@@ -124,7 +173,10 @@ export default function Resume() {
           {/* Hero + Download */}
           <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <Link to="/" className="mb-4 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-sky-300 transition-colors">
+              <Link
+                to="/"
+                className="mb-4 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-sky-300 transition-colors"
+              >
                 <span>←</span> Back to home
               </Link>
               <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
@@ -132,7 +184,9 @@ export default function Resume() {
                   Parna Ghosh
                 </span>
               </h1>
-              <p className="mt-1 text-gray-300/90">Computer Science & Engineering · Full Stack Developer</p>
+              <p className="mt-1 text-gray-300/90">
+                Computer Science & Engineering · Full Stack Developer
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -141,7 +195,19 @@ export default function Resume() {
                 download="Parna-Ghosh-Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 via-cyan-400 to-indigo-500 px-5 py-2.5 text-sm font-medium text-white shadow-[0_0_24px_rgba(56,189,248,0.6)] transition-all hover:shadow-[0_0_36px_rgba(56,189,248,0.8)] hover:-translate-y-0.5"
               >
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
                 Download PDF
               </a>
               <a
@@ -150,7 +216,19 @@ export default function Resume() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-medium text-gray-200 backdrop-blur-xl transition-all hover:bg-white/10 hover:text-white"
               >
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
                 Open in new tab
               </a>
             </div>
@@ -160,7 +238,11 @@ export default function Resume() {
           <ResumeCard className="mb-10">
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
               {contacts.map(({ label, value, href }) => (
-                <a key={label} href={href} className="text-gray-300 hover:text-sky-300 transition-colors">
+                <a
+                  key={label}
+                  href={href}
+                  className="text-gray-300 hover:text-sky-300 transition-colors"
+                >
                   <span className="text-gray-500">{label}:</span> {value}
                 </a>
               ))}
@@ -173,8 +255,12 @@ export default function Resume() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   {Object.entries(skills).map(([category, items]) => (
                     <div key={category}>
-                      <p className="text-xs font-medium uppercase tracking-wider text-sky-200/90 mb-2">{category}</p>
-                      <p className="text-sm text-gray-200/90">{items.join(", ")}</p>
+                      <p className="text-xs font-medium uppercase tracking-wider text-sky-200/90 mb-2">
+                        {category}
+                      </p>
+                      <p className="text-sm text-gray-200/90">
+                        {items.join(", ")}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -186,12 +272,22 @@ export default function Resume() {
                 {projects.map((proj) => (
                   <ResumeCard key={proj.name}>
                     <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-                      <h3 className="text-lg font-semibold text-white">{proj.name}</h3>
-                      <span className="text-xs text-gray-400">{proj.period}</span>
+                      <h3 className="text-lg font-semibold text-white">
+                        {proj.name}
+                      </h3>
+                      <span className="text-xs text-gray-400">
+                        {proj.period}
+                      </span>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {Object.entries(proj.links).map(([label, url]) => (
-                        <a key={label} href={url} target="_blank" rel="noopener noreferrer" className="text-xs text-sky-300 hover:underline">
+                        <a
+                          key={label}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-sky-300 hover:underline"
+                        >
                           {label} →
                         </a>
                       ))}
@@ -201,7 +297,9 @@ export default function Resume() {
                         <li key={i}>{p}</li>
                       ))}
                     </ul>
-                    <p className="text-xs text-gray-400">Tech: {proj.tech.join(", ")}</p>
+                    <p className="text-xs text-gray-400">
+                      Tech: {proj.tech.join(", ")}
+                    </p>
                   </ResumeCard>
                 ))}
               </div>
@@ -252,11 +350,15 @@ export default function Resume() {
                 {education.map((e) => (
                   <ResumeCard key={`${e.institution}-${e.degree}`}>
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="font-semibold text-white">{e.institution}</h3>
+                      <h3 className="font-semibold text-white">
+                        {e.institution}
+                      </h3>
                       <span className="text-xs text-gray-400">{e.period}</span>
                     </div>
                     <p className="text-sm text-gray-400">{e.location}</p>
-                    <p className="text-sm text-gray-200/90 mt-1">{e.degree} · {e.detail}</p>
+                    <p className="text-sm text-gray-200/90 mt-1">
+                      {e.degree} · {e.detail}
+                    </p>
                   </ResumeCard>
                 ))}
               </div>
@@ -265,12 +367,21 @@ export default function Resume() {
 
           {/* Bottom download CTA */}
           <div className="mt-14 rounded-2xl border border-sky-400/20 bg-sky-500/10 p-6 text-center backdrop-blur-xl">
-            <p className="text-sm text-gray-200/90 mb-4">Save or share this resume</p>
+            <p className="text-sm text-gray-200/90 mb-4">
+              Save or share this resume
+            </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href={pdfUrl} download="Parna-Ghosh-Resume.pdf" className="inline-flex items-center gap-2 rounded-xl bg-sky-500/30 px-4 py-2 text-sm font-medium text-sky-200 hover:bg-sky-500/40 transition-colors">
+              <a
+                href={pdfUrl}
+                download="Parna-Ghosh-Resume.pdf"
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-500/30 px-4 py-2 text-sm font-medium text-sky-200 hover:bg-sky-500/40 transition-colors"
+              >
                 Download PDF
               </a>
-              <Link to="/#contact" className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-white/10 transition-colors">
+              <Link
+                to="/#contact"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-white/10 transition-colors"
+              >
                 Get in touch
               </Link>
             </div>
